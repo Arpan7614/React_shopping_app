@@ -1,0 +1,40 @@
+.main{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+.carousel{
+    height: 40vmin;
+    width: 50vmin;
+    
+}
+
+.main_carousel{
+    margin-left: 10vmin;
+    margin-top: 5vmin ;
+   
+   
+}
+
+.main_carousel img{
+    border: none;
+}
+
+
+.details{
+    margin-left: 60vmin;
+    margin-top: -30vmin;
+    position: fixed;
+
+}
+
+.btn{
+    background: #3669C9;
+    border: none;
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+    height: 3.9vmin;
+    width: 17vmin;
+    color: white;
+    border-radius: 4px;
+}

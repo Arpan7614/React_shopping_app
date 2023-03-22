@@ -1,0 +1,70 @@
+
+.main{
+    background-color:#171934;
+    color: white;
+    padding-top: 1vmin;
+}
+
+.main h1{
+    margin-left: 20vmin;
+    margin-bottom: 5vmin;
+    
+}
+
+hr{
+    margin-left: 20vmin;
+    margin-right: 20vmin;
+}
+
+.footer {
+    
+   
+    background-color:#171934;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vmin;
+}
+.footer div{
+    background-color:transparent;
+    color: white;
+    margin-right: 20vmin;
+    margin-bottom: 10vmin;
+    display: inline-block;
+}
+
+.footer h1{
+    color: white;
+}
+
+
+/* .contain{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.contain div{
+    height: 5vmin;
+    width: 20vmin;
+}
+footer div{
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
+h1{
+     margin: 0 0 4vmin 15vmin;
+     padding-top: 5vmin;
+}
+hr{
+    margin-left: 15vmin;
+} */

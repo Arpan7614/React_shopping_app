@@ -1,0 +1,60 @@
+
+
+.nav{
+    background-color: white;
+    width: 100vw;
+    height: 50px;
+    margin: -20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+   
+   
+    
+}
+.heading{
+   color: #4169E1;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-right: 30px;
+    margin-left: 40px;
+    font-weight: bold;
+    
+    
+}
+
+.person-icon{
+    width: 200px;
+    color: #4169E1;
+    margin-top: 30px;
+    margin-left: 70%;
+    font-size: 25px;
+    
+    
+}
+
+.nav-login{
+    color: "#4169E1"; 
+    margin-left: -160px;  
+    margin-top: 30px;
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+.nav-register{
+    color: rgba(0, 0 , 200, 0.8);
+    margin-top: 30px;
+    margin-right: 5px;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.cart-icon{
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
