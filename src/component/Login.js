@@ -2,7 +2,6 @@ import React, { useState , useEffect} from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { toast } from "react-toastify";
-import { ProductList } from "./Products";
 import { Link } from "react-router-dom";
 
 

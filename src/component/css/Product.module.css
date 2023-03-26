@@ -1,7 +1,7 @@
 
 .container{
 
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,8 +17,8 @@
     margin-top: 8vmin;
     
     padding: 2vmin;
-    height: 45vmin;
-    width: 35vmin;
+    height: 50vmin;
+    width: 40vmin;
     
 }
 

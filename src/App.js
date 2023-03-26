@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+// import { getUserId } from '../src/helpers/getUserid'
+import { useEffect } from "react";
+import axios from "axios";
 import "./App.css";
 import {
 	Route,
@@ -10,31 +13,29 @@ import {
 
 import { Login } from "./component/Login";
 import { Register } from "./component/Register";
-import { Navbar } from "./component/Navbar";
-import { ProductList } from "./component/Products";
+import { AllProductsComponent } from "./component/AllProductComponent";
 import Details from "./component/Details";
 import Cart from "./component/Cart";
 
+import { Card } from "./component/Product";
+
 function App() {
-	// const [currentForm, setCurrentForm] = useState("login");
-
-	// const toggleForm = (formName) => {
-	// 	setCurrentForm(formName);
-	// };
-
 	return (
 		<div className="App">
+			{/* <ProductProvider>
+				<Product/>
+				<Cart />
+			</ProductProvider> */}
 			<div className="Header">
 				<BrowserRouter>
 					<Routes>
-						<Route path="/products" element={<ProductList />} />
+						<Route path="/products" element={<AllProductsComponent />} />
+						<Route path="/cart" element={<Cart />} />
 						<Route path="/" element={<Login />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/details/:id" element={<Details />} />
-						<Route path="/cart" element={<Cart/>}/>
 					</Routes>
 				</BrowserRouter>
-
 			</div>
 		</div>
 	);

@@ -6,6 +6,7 @@ import { Navbar } from "./Navbar";
 import styles from "../component/css/Cart.module.css";
 function Cart() {
     const userId = getUserId();
+    // console.log(userId)
     const [products, setProducts] = useState([]);
     const [ordertotal, setorderTotal] = useState(0);
     const [state, setState] = useState(true);
@@ -16,7 +17,9 @@ function Cart() {
     }, [products]);
     const fetchProducts = () => {
         axios
-            .get("http://localhost:8000/cart")
+            .post("http://localhost:8000/cart", {
+                userid: userId
+            })
             .then((res) => {
                 setProducts(res.data);
             })
@@ -61,7 +64,7 @@ function Cart() {
             headers: { "Content-Type": "application/json" },
         });
     }
-        let cart = products.map((v) => ({ ...v, added: false }));
+        // let cart = products.map((v) => ({ ...v, added: false }));
         async function deleteFromCart(data) {
             console.log(data);
             const res = await fetch("http://localhost:8000/cartdeleteitem", {
@@ -136,6 +139,7 @@ function Cart() {
                         </span>
                     </div>
                 </div>
+                
             </div>
         );
     }

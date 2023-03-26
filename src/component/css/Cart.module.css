@@ -1,9 +1,9 @@
 
 
 .product{
+    position: relative;
     display: flex;
     background-color: white;
-    ;
     margin-top: 5vmin;
     margin-left: 5vmin;
     height: fit-content;
@@ -51,10 +51,12 @@
     
    
     margin-left: 60em;
-    margin-top: -50vmin;
-    position: sticky;
+    top: 12%;
+    /* margin-top: -1000px; */
+    position: fixed;
     width: 30em;
     height: 35em;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     margin-bottom: 2em;
@@ -82,4 +84,10 @@
     width: 22em;
     font-size: 1em;
     font-weight: bold;
+}
+
+.notice{
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
 }
