@@ -72,7 +72,7 @@ export const Product= (props) => {
         event.stopPropagation()
         const userId = getUserId();
         if (!userId) {
-            alert("Please login to add products!")
+            window.alert("Please login to add products!")
             return;
         }
         if (text === "Add to Cart") {

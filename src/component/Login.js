@@ -1,7 +1,8 @@
 import React, { useState , useEffect} from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { Navbar } from "./Navbar";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
 
 
@@ -34,21 +35,30 @@ export const Login = () => {
     const submitClick=(e)=>{
         e.preventDefault();
         console.log(inputField)
+        if(!inputField.useremail || !inputField.password){
+            alert("Please complete input fields")
+            return;
+        }
         API.post("/login", inputField)
             .then((res) => {
                 const data = res.data;
                 const token = data.data;
-                toast.success("Login Successful")
+                toast.success('Login Successfully !', {
+                    position: toast.POSITION.TOP_RIGHT
+                });
                 if (token) {
                     localStorage.setItem("token", token);
                     setTimeout(() => {
                         navigate("/products");
-                    }, 0);
+                    }, 2000);
                 }
             })
             .catch((err) => {
                 console.log(err);
-                toast.error(err.response.data.error);
+                toast.error('Login failed!', {
+                    position: toast.POSITION.TOP_RIGHT
+                });
+                // toast.error(err.response.data.error);
             });
     };
         

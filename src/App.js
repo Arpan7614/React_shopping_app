@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { getUserId } from '../src/helpers/getUserid'
 import { useEffect } from "react";
 import axios from "axios";
+import { ToastContainer ,toast} from "react-toastify";
 import "./App.css";
 import {
 	Route,
@@ -16,16 +17,20 @@ import { Register } from "./component/Register";
 import { AllProductsComponent } from "./component/AllProductComponent";
 import Details from "./component/Details";
 import Cart from "./component/Cart";
+import { Order } from "./component/Order";
 
-import { Card } from "./component/Product";
+
 
 function App() {
 	return (
 		<div className="App">
-			{/* <ProductProvider>
-				<Product/>
-				<Cart />
-			</ProductProvider> */}
+			<ToastContainer
+                limit={5}
+                autoClose={2500}
+                closeOnClick={true}
+                theme={"dark"}
+              />
+			
 			<div className="Header">
 				<BrowserRouter>
 					<Routes>
@@ -34,6 +39,7 @@ function App() {
 						<Route path="/" element={<Login />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/details/:id" element={<Details />} />
+						<Route path="/order" element={<Order/>}/>
 					</Routes>
 				</BrowserRouter>
 			</div>

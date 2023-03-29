@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { getUserId } from "../helpers/getUserid";
 import { Navbar } from "./Navbar";
+import {  useNavigate } from "react-router-dom";
 import styles from "../component/css/Cart.module.css";
 function Cart() {
     const userId = getUserId();
+    const navigate = useNavigate();
     // console.log(userId)
     const [products, setProducts] = useState([]);
     const [ordertotal, setorderTotal] = useState(0);
@@ -76,6 +78,30 @@ function Cart() {
             console.log(data0);
             return data0;
         }
+    
+    
+    async function handlePlaceOrder(event) {
+        const data = {
+            userid: userId,
+            info: products,
+            amount:ordertotal
+            
+        }
+        console.log(data)
+        
+        axios
+            .post("http://localhost:8000/deleteAllCart", {
+                data
+            })
+            .then((res) => {
+                console.log("deleted")
+                navigate('/order');
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+        
+    }
 
         return (
             <div>
@@ -133,7 +159,10 @@ function Cart() {
                             <span className={styles.highlight}>{ordertotal}</span>
                         </div>
 
-                        <button className={styles.placeOrderBtn}>Place Order</button>
+                        <button
+                            className={styles.placeOrderBtn}
+                            onClick={(event) => handlePlaceOrder(event)}
+                        >Place Order</button>
                         <span className={styles.notice}>
                             *Custom orders need a few working days to be created. More info here
                         </span>

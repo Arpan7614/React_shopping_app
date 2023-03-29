@@ -2,14 +2,115 @@ body{
     background-color: rgba(10, 100 , 255, 0.1);
 }
 
+@media screen and (max-width:500px){
+    .register-container{
+        height: 600px;
+        width: 400px;
+        margin-left: 100px;
+        background-color: white;
+        margin-top: 100px;
+    }
 
-.register-container{
+    .email-holder-reg{
+        border: none;
+        margin-left: 25px;
+        width: 300px;
+        height: 50px;
+        padding-left: 20px;
+        background-color: rgb(252, 248, 248);
+        margin-bottom: 21px;
+    } 
+
+    .signup-btn{
+        margin-top: 30px;
+        color: white;
+        width: 350px;
+        height: 35px;
+        border: none;
+        background-color: #4169E1;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        font-weight: bold;
+        border-radius: 3%;
+      
+      }
+
+    
+}
+@media only screen and (min-width: 550px) and (max-width: 1190px) {
+    .register-container{
+        height: 700px;
+        width: 500px;
+        margin-left: 600px;
+        background-color: white;
+        margin-top: 100px;
+    }
+
+    .email-holder-reg{
+        border: none;
+        margin-left: 25px;
+        width: 400px;
+        height: 50px;
+        padding-left: 20px;
+        background-color: rgb(252, 248, 248);
+        margin-bottom: 21px;
+    } 
+    .signup-btn{
+        margin-top: 30px;
+        color: white;
+        width: 350px;
+        height: 35px;
+        border: none;
+        background-color: #4169E1;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        font-weight: bold;
+        border-radius: 3%;
+      
+      }
+
+}
+@media screen and (min-width:1200px){
+    .register-container{
+        height: 700px;
+        width: 500px;
+        margin-left: 600px;
+        background-color: white;
+        margin-top: 100px;
+    }
+    .email-holder-reg{
+        border: none;
+        margin-left: 25px;
+        width: 400px;
+        height: 50px;
+        padding-left: 20px;
+        background-color: rgb(252, 248, 248);
+        margin-bottom: 21px;
+    } 
+    .signup-btn{
+        margin-top: 30px;
+        color: white;
+        width:410px;
+        height: 35px;
+        border: none;
+        background-color: #4169E1;
+        margin-bottom: 20px;
+        margin-left: 25px;
+        font-weight: bold;
+        border-radius: 3%;
+      
+      }
+
+}
+
+
+/* .register-container{
     height: 700px;
     width: 500px;
     margin-left: 600px;
     background-color: white;
     margin-top: 100px;
-}
+} */
 .head{
     padding-top: 20px;
     margin-top:25px ;
@@ -24,7 +125,7 @@ body{
     font-size: 18px;
     font-weight: bold;
 } 
- .email-holder-reg{
+ /* .email-holder-reg{
     border: none;
     margin-left: 25px;
     width: 400px;
@@ -32,8 +133,8 @@ body{
     padding-left: 20px;
     background-color: rgb(252, 248, 248);
     margin-bottom: 21px;
-} 
-.signup-btn{
+}  */
+/* .signup-btn{
   margin-top: 30px;
   color: white;
   width:410px;
@@ -45,7 +146,7 @@ body{
   font-weight: bold;
   border-radius: 3%;
 
-}
+} */
 .user-reg{
     margin-left: 25px;
     font-weight: bold;
